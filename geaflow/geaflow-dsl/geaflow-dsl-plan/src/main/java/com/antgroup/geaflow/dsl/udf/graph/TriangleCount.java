@@ -87,9 +87,6 @@ public class TriangleCount implements AlgorithmUserFunction<Object, ObjectRow> {
                 targetSet.retainAll(sourceSet);
                 count += targetSet.size();
             }
-            if (count % 2 != 0) {
-                throw new GeaFlowDSLException("Triangle count resulted in an invalid number of triangles.");
-            }
             context.take(ObjectRow.create(vertex.getId(), count / 2));
         }
     }
