@@ -72,7 +72,10 @@ data: {
         "DIFFERENT",
         "PARTITIONED",
         "YIELD",
-        "IF"
+        "IF",
+        "V",
+        "HAS",
+        "HASLABEL"
     ]
 
     # let noReservedKeywords can be a identifier
@@ -493,6 +496,7 @@ data: {
     extendLeafQueryParserMethods: [
         "GQLMatchStatement",
         "GQLGraphAlgorithmCall"
+        "GremlinQueryStatement"
     ]
     # List of files in @includes directory that have parser method
     # implementations for parsing custom SQL statements, literals or types
@@ -511,6 +515,7 @@ data: {
       "useGraph.ftl",
       "useInstance.ftl",
       "expression.ftl"
+      "gremlinQuery.ftl"
     ]
 
     includeCompoundIdentifier: true
